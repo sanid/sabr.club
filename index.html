@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabr.club - Discover Strength in Stillness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using a specific pastel green as Tailwind's emerald-50 might be too light/blueish for some tastes.
+               This is a soft, muted green. You can adjust this hex code.
+               A good alternative could be Tailwind's bg-green-50 or bg-teal-50 if you prefer those.
+               For this example, I'll use a custom pastel green for the body background.
+            */
+            background-color: #f0fdf4; /* Tailwind's green-50 equivalent for a very light pastel green */
+        }
+        .pastel-green-bg {
+            background-color: #d1fae5; /* Tailwind's green-200 - a bit more saturated pastel */
+        }
+        .darker-pastel-green-text {
+            color: #065f46; /* Tailwind's green-700 */
+        }
+        .button-primary {
+            background-color: #10b981; /* Tailwind's emerald-500 */
+            color: white;
+        }
+        .button-primary:hover {
+            background-color: #059669; /* Tailwind's emerald-600 */
+        }
+        .button-secondary {
+            background-color: white;
+            color: #10b981; /* Tailwind's emerald-500 */
+            border: 1px solid #10b981;
+        }
+        .button-secondary:hover {
+            background-color: #ecfdf5; /* Tailwind's emerald-50 */
+        }
+        /* Custom animation for hero section elements */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fadeInDown {
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .hero-element-1 { animation-delay: 0.2s; opacity: 0; }
+        .hero-element-2 { animation-delay: 0.4s; opacity: 0; }
+        .hero-element-3 { animation-delay: 0.6s; opacity: 0; }
+
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <nav class="bg-white/80 backdrop-blur-md shadow-sm fixed w-full z-50 top-0">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold darker-pastel-green-text">Sabr.club</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#features" class="text-gray-600 hover:darker-pastel-green-text transition duration-300">Features</a>
+                <a href="#about" class="text-gray-600 hover:darker-pastel-green-text transition duration-300">About</a>
+                <a href="#contact" class="text-gray-600 hover:darker-pastel-green-text transition duration-300">Contact</a>
+                <a href="#" class="button-primary py-2 px-5 rounded-lg shadow-md hover:shadow-lg transition duration-300">Join Now</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#features" class="block py-3 px-6 text-gray-600 hover:bg-emerald-50 hover:darker-pastel-green-text transition duration-300">Features</a>
+            <a href="#about" class="block py-3 px-6 text-gray-600 hover:bg-emerald-50 hover:darker-pastel-green-text transition duration-300">About</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-emerald-50 hover:darker-pastel-green-text transition duration-300">Contact</a>
+            <a href="#" class="block py-3 px-6 button-primary text-center m-4 rounded-lg">Join Now</a>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex items-center justify-center pt-20 lg:pt-0" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold darker-pastel-green-text mb-6 animate-fadeInDown hero-element-1">
+                Discover Strength in <span class="text-emerald-500">Stillness</span>.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto animate-fadeInDown hero-element-2">
+                Sabr.club is your sanctuary for cultivating patience, resilience, and mindful living. Join our community and find your inner peace.
+            </p>
+            <div class="animate-fadeInUp hero-element-3">
+                <a href="#" class="button-primary py-3 px-8 text-lg rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    Join Sabr.club
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="py-16 sm:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center darker-pastel-green-text mb-12 sm:mb-16">What We Offer</h2>
+            <div class="grid md:grid-cols-3 gap-8 sm:gap-12">
+                <div class="bg-emerald-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center mb-6">
+                        <svg class="w-16 h-16 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> </div>
+                    <h3 class="text-2xl font-semibold darker-pastel-green-text mb-3 text-center">Cultivate Resilience</h3>
+                    <p class="text-gray-600 text-center">
+                        Learn practices to navigate life's challenges with grace, build mental fortitude, and bounce back stronger.
+                    </p>
+                </div>
+                <div class="bg-emerald-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center mb-6">
+                         <svg class="w-16 h-16 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg> </div>
+                    <h3 class="text-2xl font-semibold darker-pastel-green-text mb-3 text-center">Supportive Community</h3>
+                    <p class="text-gray-600 text-center">
+                        Connect with like-minded individuals on a shared journey of growth. Share experiences and find encouragement.
+                    </p>
+                </div>
+                <div class="bg-emerald-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="flex items-center justify-center mb-6">
+                        <svg class="w-16 h-16 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v11.494m0 0a8.485 8.485 0 0011.92 0M12 17.747a8.485 8.485 0 01-11.92 0M12 17.747l-.001-.001L12 17.747zM12 6.253L12 6.253l-.001-.001L12 6.253zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> </div>
+                    <h3 class="text-2xl font-semibold darker-pastel-green-text mb-3 text-center">Curated Resources</h3>
+                    <p class="text-gray-600 text-center">
+                        Access guided meditations, insightful articles, and practical tools to deepen your understanding and practice.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-24" style="background-color: #f0fdf4;">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold darker-pastel-green-text mb-8">About Sabr.club</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+                At Sabr.club, we believe that patience (Sabr) is more than just waiting; it's an active state of perseverance, resilience, and trust. Our mission is to provide a supportive space where individuals can learn, practice, and embody patience to lead more fulfilling and peaceful lives.
+            </p>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Founded on the principles of mindfulness and community, we offer resources and connections to help you navigate the complexities of modern life with a calm and steady heart.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 sm:py-24 pastel-green-bg">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-emerald-700 mb-6">Ready to Embrace a More Patient You?</h2>
+            <p class="text-lg text-emerald-600 mb-10 max-w-xl mx-auto">
+                Join our growing community today and start your journey towards greater peace, resilience, and mindful living.
+            </p>
+            <a href="#" class="button-primary py-3 px-8 text-lg rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                Start Your Journey
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center darker-pastel-green-text mb-12">Get In Touch</h2>
+            <form class="max-w-xl mx-auto bg-emerald-50 p-8 rounded-xl shadow-lg">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent outline-none transition-shadow" placeholder="Your Name">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent outline-none transition-shadow" placeholder="you@example.com">
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-400 focus:border-transparent outline-none transition-shadow" placeholder="Your message..."></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="button-primary py-3 px-8 text-lg rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <a href="#" class="text-xl font-semibold text-emerald-400 hover:text-emerald-300 transition duration-300">Sabr.club</a>
+            </div>
+            <div class="mb-6 space-x-6">
+                <a href="#features" class="hover:text-emerald-400 transition duration-300">Features</a>
+                <a href="#about" class="hover:text-emerald-400 transition duration-300">About</a>
+                <a href="#contact" class="hover:text-emerald-400 transition duration-300">Contact</a>
+                <a href="#" class="hover:text-emerald-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-emerald-400 transition duration-300">Terms of Service</a>
+            </div>
+            <div class="mb-6 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-emerald-400 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-emerald-400 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.831 9.495.498.09.684-.217.684-.483 0-.237-.008-.865-.013-1.695-2.776.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.606.069-.606 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 012.496-.336 9.554 9.554 0 012.496.336c1.906-1.29 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.18.577.688.482A10.001 10.001 0 0022 11.974C22 6.465 17.535 2 12.026 2z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-emerald-400 transition duration-300">
+                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; <span id="currentYear"></span> Sabr.club. All rights reserved. Cultivating Patience, Together.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Calculate offset for fixed navbar
+                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations on scroll (optional, for sections other than hero)
+        const sectionsToAnimate = document.querySelectorAll('#features .grid > div, #about p, #contact form');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                    entry.target.style.opacity = 0; // Reset opacity for animation
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sectionsToAnimate.forEach(section => {
+            observer.observe(section);
+        });
+
+    </script>
+</body>
+</html>
